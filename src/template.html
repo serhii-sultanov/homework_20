@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      <%= htmlWebpackPlugin.options.title %>
+    </title>
+  </head>
+
+  <body>
+    <form name="tasks" class="tasks-form">
+        <input type="text" name="task" class="input-field" placeholder="Add new task to your to-do list"/>
+        <p class="error-message"></p>
+        <button type="submit" name="submit" class="submit-btn">Add</button>
+    </form>
+    
+    <ul id="list" class="tasks-list">
+        <div class="progress mb-4" style="height: 20px;">
+            <div class="progress-bar" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </ul>
+  </body>
+</html>
+
+
+
+<!-- [
+      {
+        test: /\.(scss)$/,
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: () => [
+                  require('autoprefixer')
+                ]
+              }
+            }
+          },
+          {
+            loader: 'sass-loader'
+          }
+        ]
+      }
+    ]
+
+
+
+
+    [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+      { test: /\.js$/, use: "babel-loader", exclude: /node_modules/ },
+    ], -->
